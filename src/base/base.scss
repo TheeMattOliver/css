@@ -45,7 +45,7 @@ hr,
   overflow: hidden;
   background: transparent;
   border: 0;
-  border-bottom: $border-width $border-style var(--color-border-muted);
+  // border-bottom: $border-width $border-style var(--color-border-muted);
 
   @include clearfix();
 }
@@ -77,10 +77,14 @@ button {
 }
 
 details {
-  summary { cursor: pointer; }
+  summary {
+    cursor: pointer;
+  }
 
   &:not([open]) {
     // Set details content hidden by default for browsers that don't do this
-    > *:not(summary) { display: none !important; }
+    > *:not(summary) {
+      display: none !important;
+    }
   }
 }

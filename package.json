@@ -1,9 +1,8 @@
 {
   "name": "@primer/css",
   "version": "19.2.0",
-  "description": "The CSS implementation of GitHub's Primer Design System",
-  "homepage": "https://primer.style/css",
-  "author": "GitHub, Inc.",
+  "description": "A Fork of Primer CSS to learn Stylelint and how to automate the creation of utility classes",
+  "author": "Github, Inc.",
   "engines": {
     "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
@@ -17,7 +16,6 @@
     "url": "https://github.com/primer/css/issues"
   },
   "keywords": [
-    "primer",
     "css",
     "github",
     "design-system"
@@ -33,7 +31,8 @@
     "pretest": "yarn dist && script/pretest",
     "test": "NODE_OPTIONS=--experimental-vm-modules yarn jest",
     "release": "changeset publish",
-    "storybook": "cd docs && yarn && yarn storybook"
+    "storybook": "cd docs && yarn && yarn storybook",
+    "sass-dev": "sass --watch --update --style=expanded src:dist/"
   },
   "dependencies": {
     "@primer/primitives": "^7.4.0"
@@ -64,6 +63,7 @@
     "postcss-scss": "4.0.2",
     "postcss-simple-vars": "6.0.3",
     "prettier": "2.5.1",
+    "sass": "^1.49.7",
     "semver": "7.3.5",
     "stylelint": "14.2.0",
     "table": "6.7.5"
